@@ -1,0 +1,23 @@
+{
+  "name": "gcx",
+  "version": "1.0.0",
+  "description": "Watcher file for compiling with G++",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhibbudins/gcx.git"
+  },
+  "author": "Muhibbudin Suretno <muhibbudinsuretno1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhibbudins/gcx/issues"
+  },
+  "homepage": "https://github.com/muhibbudins/gcx#readme",
+  "dependencies": {
+    "chokidar": "^2.0.4",
+    "progress-estimator": "^0.2.2"
+  }
+}
