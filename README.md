@@ -1,2 +1,3 @@
-# server-less
-Connect Spreadsheet to HTML with API
+# GCX
+
+Watcher file for compiling with G++
