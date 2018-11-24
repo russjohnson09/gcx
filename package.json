@@ -18,6 +18,7 @@
   "homepage": "https://github.com/muhibbudins/gcx#readme",
   "dependencies": {
     "chokidar": "^2.0.4",
+    "meow": "^5.0.0",
     "progress-estimator": "^0.2.2"
   }
 }
