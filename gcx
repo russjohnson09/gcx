@@ -17,4 +17,6 @@ const CLI = meow(`
     $ gcx example.cpp
 `)
 
-console.log(CLI)
+if (CLI.input.length === 0) {
+  CLI.showHelp()
+}
