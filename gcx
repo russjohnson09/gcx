@@ -5,8 +5,12 @@ const path = require('path')
 const meow = require('meow')
 const process = require('child_process').exec
 const chokidar = require('chokidar')
+const chalk = require('chalk')
 
-const spinner = ora('Please wait').start()
+const spinner = ora('Please wait')
+const echo = (text, color) => {
+  console.log(chalk[color](text))
+}
 
 const CLI = meow(`
   Usage
@@ -26,11 +30,21 @@ const CLI = meow(`
   }
 })
 
-const compile = (file, verbose) => {
+const compile = (file, disableVerbose) => {
+  if (!disableVerbose) {
+    echo(`\n[PROCESS]\n`, 'cyan')
+    spinner.start()
+  }
   return new Promise((resolve, reject) => {
     process(
       `g++ ${file} -o ${file.replace('cpp', 'out')} -lcurses && ./${file.replace('cpp', 'out')}`
     , (err, stdout, stderr) => {
+      if (!disableVerbose) {
+        spinner.stop()
+        echo(`Compiling file ${file} success\n`, 'white')
+        echo(`[RESULT]\n`, 'green')
+      }
+
       if (err) {
         reject(stderr)
       } else {
