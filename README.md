@@ -1,3 +1,3 @@
 # GCX
 
-Watcher file for compiling with G++
+Watcher file for compiling C++ with G++
