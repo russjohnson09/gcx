@@ -1,5 +1,7 @@
 # GCX
 
+![Demo](./demo.gif)
+
 Watcher file for compiling C++ with G++
 
 ### Requirement
