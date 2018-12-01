@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/muhibbudins/gcx#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
     "chokidar": "^2.0.4",
     "meow": "^5.0.0",
+    "ora": "^3.0.0",
     "progress-estimator": "^0.2.2"
   }
 }
