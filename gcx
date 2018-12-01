@@ -41,8 +41,7 @@ const compile = (file, disableVerbose) => {
     , (err, stdout, stderr) => {
       if (!disableVerbose) {
         spinner.stop()
-        echo(`Compiling file ${file} success\n`, 'white')
-        echo(`[RESULT]\n`, 'green')
+        echo(`Compiling file ${file} success`, 'white')
       }
 
       if (err) {
@@ -70,9 +69,11 @@ else {
   ).on('all', (event, path) => {
     compile(filename, CLI.flags['silent'])
       .then(res => {
+        echo(`\n[RESULT]\n`, 'green')
         console.log(res)
       })
       .catch(res => {
+        echo(`\n[ERROR]\n`, 'red')
         console.log('error', res)
       })
   })
