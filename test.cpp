@@ -6,9 +6,9 @@ int main() {
   int angka = 10;
 
   if (angka > 5) {
-    cout << "assadas";
+    cout << "Angka lebih dari 5";
   } else {
-    cout << "ASdasd";
+    cout << "Angka kurang dari 5";
   }
 
   return 0;
